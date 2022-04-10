@@ -92,6 +92,15 @@ h2 {
 	position: fixed;
 	right: 3%;
 	bottom: 3%;
+	text-decoration: none;
+	background: #0388A6;
+	color: white;
+	padding: 24px;
+
+}
+
+.icono-subir {
+	color: white;
 
 }
 .contenedor {
@@ -127,3 +136,19 @@ section li {
 	list-style-type: none;
 	padding: 3 em;
 }
+.centrar-caja {
+	display: flex;
+	width: 800px;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* #cont {
+	display: flex;
+	width: 800px;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+*/
