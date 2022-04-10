@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;800;900&family=Oswald:wght@200;300;400;700&display=swap');
+body {
+	background: whitesmoke;
+	color: black;
+	margin: 0;
+	font-family: 'Maven Pro', sans-serif;
+	font-weight: '600';
+	font-size: 18px;
+	text-align: justify;
+}
+header, footer {
+	background: black;
+	color: white;
+	text-align: center;
+}
+/* BOX MODEL */
+header, footer {
+	padding:120px 32px;
+}
+
+nav {
+	margin-top: -60px;
+}
+nav ul {
+	padding-left: 0;
+	display:flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+	list-style-type: none;
+
+} 
+nav ul a {
+	background: #0388A6;
+	color: white;
+	padding: 1em;
+	margin: 2em;
+	text-decoration: none;
+}
+nav ul a:hover {
+	background: black;
+	color: white;
+	padding: 1em;
+	margin: 2em;
+}
+hr {
+	border: none;
+	border-top: 1px #ACD1F2 ;
+	padding: 12px;
+}
+
+.foto-flotante {
+	float: left;
+	width:calc(33.33% - 36px);
+	margin-right: 2em;
+	margin-top: 1em;
+	display: flex;
+    margin: 0;
+
+}
+.foto-flotante img {
+	border-radius: 50%;
+}
+
+div.texto-pres {
+	margin-top: 16px;
+    padding: 16px;
+    float: left;
+    width: 66.66%;
+    box-sizing: border-box;
+    margin-bottom: 2em;
+}
+
+.fin-flotar {
+	clear:both;
+}
+
+#pre {
+	width: 1200px;
+	margin: auto;
+
+}
+h2 {
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	font-variant-caps: all-small-caps;
+	font-size: 36px;
+	color: #0388A6;
+}
+.boton-subir {
+	position: fixed;
+	right: 3%;
+	bottom: 3%;
+
+}
+.contenedor {
+	width:1200px;
+	margin:0 auto;
+	position:relative;
+}
+section ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+section ul li figure {
+	max-width: 400px;
+}
+
+/******************************/
+/***		FLEXBOX			***/
+/******************************/	
+	
+.fila {
+	display:flex;
+	flex-flow: row wrap; 
+}
+
+.texto-centrado {
+	width:800px;
+	margin:0 auto;
+	position:relative;
+	list-style-type:none;
+}
+section li {
+	list-style-type: none;
+	padding: 3 em;
+}
