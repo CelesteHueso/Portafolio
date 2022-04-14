@@ -35,14 +35,14 @@ nav ul a {
 	background: #0388A6;
 	color: white;
 	padding: 1em;
-	margin: 2em;
+	margin: 0.5em;
 	text-decoration: none;
 }
 nav ul a:hover {
 	background: black;
 	color: white;
 	padding: 1em;
-	margin: 2em;
+	margin: 0.5em;
 }
 hr {
 	border: none;
@@ -108,14 +108,20 @@ h2 {
 	margin:0 auto;
 	position:relative;
 }
-section ul {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
 section ul li figure {
-	max-width: 400px;
+	
 }
+.alinear-porta {
+ 	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin: 1em;
+	justify-content: center;
+ }
+ .alinear-porta > li {
+ 	width: 40%;
+ 	justify-content: center;
+ }
 
 /******************************/
 /***		FLEXBOX			***/
@@ -135,6 +141,7 @@ section ul li figure {
 section li {
 	list-style-type: none;
 	padding: 3 em;
+	margin-bottom: 1.5em;
 }
 .centrar-caja {
 	display: flex;
@@ -152,3 +159,108 @@ section li {
 	align-items: center;
 }
 */
+
+
+section ul li figure img {
+	width: 100%;
+	height: auto;
+}
+.alinear-dl {
+	display: flex;
+	width: 800px;
+	flex-flow: row;
+	margin: 1em;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+section dl dt {
+	width: 50%;
+	text-align: right;
+	/* border-right: 2px #0388A6 solid; */
+	margin right: 1em;
+	padding right: 1em;
+	padding-bottom: 0em;
+	white-space: pre-wrap ;
+}
+
+section dl dt dd {
+	width: 50%;
+	text-align: left;
+	border-left: 2px #0388A6 solid;
+	margin: 0;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width:1230px) {
+	.foto-flotante {
+	width:calc(30% - 8px);
+	padding: 0.5em;
+	margin: 0.5em;
+	display: flex;
+    margin: 0;
+    align-self: center;
+	}
+
+	div.texto-pres {
+		margin-top: 16px;
+	    padding: 0.5em;
+	    float: left;
+	    width: calc(60% - 8px);
+	    box-sizing: border-box;
+	    margin-bottom: 2em;
+	    margin-left: 0.5em;
+	}
+	main section figure {
+		display: grid; 
+	}
+}
+
+@media screen and (max-width:1037px) {
+	#pre {
+		width: 900px;
+		margin: auto;
+	}
+
+	.contenedor {
+		width:800px;
+		margin:0 auto;
+		position:relative;
+	}
+
+
+	div.texto-pres {
+		margin-top: 16px;
+	    padding: 0.5em;
+	    float: left;
+	    width: calc(60% - 8px);
+	    box-sizing: border-box;
+	    margin-bottom: 2em;
+	    margin-left: 3em;
+	}
+	
+	nav ul {
+	padding-left: 0;
+	display:flex;
+	flex-direction:row;
+	flex-wrap: initial;
+	align-items: center;
+	justify-content: space-around;
+	list-style-type: none;
+	} 
+}
+
+@media screen and (max-width:1020px) {
+	nav ul {
+	padding-left: 0;
+	display:block;
+	
+	} 
+	nav ul li {
+		padding: 20px;
+	}
+	nav {
+		margin-top: 0;
+	}
+}
+
