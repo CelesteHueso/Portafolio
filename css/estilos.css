@@ -57,6 +57,7 @@ hr {
 	margin-top: 1em;
 	display: flex;
     margin: 0;
+    text-align: center;
 
 }
 .foto-flotante img {
@@ -96,21 +97,32 @@ h2 {
 	background: #0388A6;
 	color: white;
 	padding: 24px;
-
 }
 
 .icono-subir {
 	color: white;
-
 }
+
+.boton-subir:hover {
+	position: fixed;
+	right: 3%;
+	bottom: 3%;
+	text-decoration: none;
+	background: black;
+	color: #0388A6;
+	padding: 24px;
+}
+
+.icono-subir:hover {
+	color: #0388A6;
+}
+
 .contenedor {
 	width:1200px;
 	margin:0 auto;
 	position:relative;
 }
-section ul li figure {
-	
-}
+
 .alinear-porta {
  	display: flex;
 	flex-wrap: wrap;
@@ -159,7 +171,9 @@ section li {
 	align-items: center;
 }
 */
-
+section ol, section ul {
+	padding: 0;
+}
 
 section ul li figure img {
 	width: 100%;
@@ -167,7 +181,7 @@ section ul li figure img {
 }
 .alinear-dl {
 	display: flex;
-	width: 800px;
+	width: 85%;
 	flex-flow: row;
 	margin: 1em;
 	flex-wrap: wrap;
@@ -177,10 +191,10 @@ section dl dt {
 	width: 50%;
 	text-align: right;
 	/* border-right: 2px #0388A6 solid; */
-	margin right: 1em;
-	padding right: 1em;
+	margin-right: 1em;
+	padding-right: 1em;
 	padding-bottom: 0em;
-	white-space: pre-wrap ;
+	white-space: pre-wrap;
 }
 
 section dl dt dd {
@@ -190,16 +204,19 @@ section dl dt dd {
 	margin: 0;
 }
 
-/* RESPONSIVE */
+/******************************/
+/***    RESPONSIVE          ***/
+/******************************/	
+
 
 @media screen and (max-width:1230px) {
 	.foto-flotante {
-	width:calc(30% - 8px);
-	padding: 0.5em;
-	margin: 0.5em;
-	display: flex;
-    margin: 0;
-    align-self: center;
+		width:calc(30% - 8px);
+		padding: 0.5em;
+		margin: 0.5em;
+		display: flex;
+	    margin: 0;
+	    align-self: center;
 	}
 
 	div.texto-pres {
@@ -211,9 +228,39 @@ section dl dt dd {
 	    margin-bottom: 2em;
 	    margin-left: 0.5em;
 	}
-	main section figure {
-		display: grid; 
+	
+}
+
+@media screen and (max-width:1199px) {
+	.contenedor {
+		width:900px;
+		margin:0 auto;
+		position:relative;
 	}
+
+	#pre {
+		width: 900px;
+		margin: auto;
+	}
+
+	.foto-flotante {
+		width:calc(30% - 8px);
+		padding: 0.5em;
+		margin: 1.5em;
+		display: flex;
+	    margin: 0;
+	}
+
+	div.texto-pres {
+		margin-top: 0;
+	    padding: 0.5em;
+	    float: left;
+	    width: calc(60% - 8px);
+	    box-sizing: border-box;
+	    margin-bottom: 2em;
+	    margin-left: 3em;
+	}
+
 }
 
 @media screen and (max-width:1037px) {
@@ -261,6 +308,171 @@ section dl dt dd {
 	}
 	nav {
 		margin-top: 0;
+	}
+}
+@media screen and (max-width:995px) {
+	.boton-subir {
+	position: fixed;
+	right: 0.5%;
+	bottom: 0.5%;
+	text-decoration: none;
+	background: #0388A6;
+	color: white;
+	padding: 6px;
+	}
+}
+
+@media screen and (max-width:900px) {
+	.contenedor {
+		width:700px;
+		margin:0 auto;
+		position:relative;
+	}
+
+	#pre {
+		width: 800px;
+		margin: auto;
+	}
+
+	.foto-flotante {
+		width:calc(30% - 8px);
+		padding: 0em;
+		margin: 0em;
+		display: flex;
+	    margin: 0;
+	}
+
+	.texto-centrado {
+		width:700px;
+		margin:0 auto;
+		position:relative;
+		list-style-type:none;
+	}
+
+	div.texto-pres {
+		margin-top: 0;
+	    padding: 0;
+	    float: left;
+	    width: calc(60% - 4px);
+	    box-sizing: border-box;
+	    margin-bottom: 2em;
+	    margin-left: 90px;
+	}
+
+	.alinear-porta > li {
+ 	width: 50%;
+ 	justify-content: center;
+ 	}
+
+}
+
+@media screen and (max-width:870px) {
+	.contenedor {
+		width:85%;
+		margin:0 auto;
+		position:relative;
+	}
+
+	#pre {
+		width: 85%;
+		margin: auto;
+	}
+
+	.texto-centrado {
+		width: 85%;
+		margin:0 auto;
+		position:relative;
+		list-style-type:none;
+	}
+
+	.foto-flotante {
+		width:100%;
+		padding: 0em;
+		margin: 1em;
+		display: block;
+		float: none;
+	    margin: 0;
+	    align-items: center;
+	}
+
+	div.texto-pres {
+		margin-top: 1em;
+	    padding: 0;
+	    float: none;
+	    width: 100%;
+	    box-sizing: border-box;
+	    margin-bottom: 2em;
+	    margin-left: 0;
+	    align-items: center;
+	}
+
+	.alinear-porta > li {
+	 	width: 50%;
+	 	justify-content: center;
+ 	}
+}
+
+ @media screen and (max-width:716px) {
+	.alinear-porta > li {
+	 	width: 87%;
+	 	justify-content: center;
+ 	}
+
+ 	.alinear-dl {
+		display: inline-flex;
+		width: 100%;
+		flex-flow: row;
+		margin: 0px;
+		flex-wrap: wrap; 
+		align-items: center;
+		justify-content: center;
+		text-align: justify;
+	}
+	.centrar-caja {
+		display: inline;
+		width: 100%;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.texto-centrado {
+		width: 85%;
+		margin:0 auto;
+		position:relative;
+		list-style-type:none;
+		text-align: center;
+	}
+}
+
+ @media screen and (max-width:500px) {
+	.alinear-porta > li {
+	 	width: 100%;
+	 	justify-content: center;
+ 	}
+
+ 	.alinear-dl {
+		display: inline;
+		width: 100%;
+		flex-flow: row;
+		margin: 0px;
+		flex-wrap: wrap; 
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+	.contenedor {
+		width:100%;
+		margin:0 auto;
+		position:relative;
+	}
+
+	.boton-subir {
+	position: fixed;
+	right: 0.5%;
+	bottom: 0.5%;
+	text-decoration: none;
+	background: #0388A6;
+	color: white;
+	padding: 3px;
 	}
 }
 
