@@ -1,6 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;800;900&family=Oswald:wght@200;300;400;700&display=swap');
+@font-face {
+ font-family: 'broadcast_matter';
+ src: url('../webfonts/broadcast_matter.ttf');
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+ font-family: 'baksosapi';
+ src: url('../webfonts/baksosapi.otf');
+ font-weight: normal;
+ font-style: normal;
+}
+h1 {
+	font-family:broadcast_matter;
+	font-size: 110px;
+	margin-bottom: 0;
+	color: black;
+	text-shadow: 2px 2px 8px #fffaf0;
+}
+h3 {
+	text-align: center;
+	font-family:baksosapi;
+}
 body {
-	background: whitesmoke;
+	background-color: #FFFAF0;
 	color: black;
 	margin: 0;
 	font-family: 'Maven Pro', sans-serif;
@@ -8,14 +31,24 @@ body {
 	font-size: 18px;
 	text-align: justify;
 }
+header {
+	background-image: url(../media/foto-header.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-color: #FFFAF0;
+}
+header p {
+	font-size: 26px;
+	margin-top: 0px;
+	font-family:baksosapi;
+}
 header, footer {
-	background: black;
-	color: white;
+	color:black;
 	text-align: center;
 }
 /* BOX MODEL */
 header, footer {
-	padding:120px 32px;
+	padding:60px 32px;
 }
 
 nav {
@@ -32,11 +65,12 @@ nav ul {
 
 } 
 nav ul a {
-	background: #0388A6;
-	color: white;
+	background: #f5d121;
+	color: black;
 	padding: 1em;
 	margin: 0.5em;
 	text-decoration: none;
+	font-family:baksosapi;
 }
 nav ul a:hover {
 	background: black;
@@ -84,17 +118,20 @@ div.texto-pres {
 }
 h2 {
 	text-align: center;
-	font-family: 'Oswald', sans-serif;
+	font-family:baksosapi;
+	/*font-family: 'Maven Pro', sans-serif;*/
 	font-variant-caps: all-small-caps;
-	font-size: 36px;
-	color: #0388A6;
+	font-size: 32px;
+	font-weight: 400;
+	color: black;
+	/*background-color:#DAA520;*/
 }
 .boton-subir {
 	position: fixed;
 	right: 3%;
 	bottom: 3%;
 	text-decoration: none;
-	background: #0388A6;
+	background: #DAA520;
 	color: white;
 	padding: 24px;
 }
@@ -113,8 +150,23 @@ h2 {
 	padding: 24px;
 }
 
-.icono-subir:hover {
-	color: #0388A6;
+section ol li p {
+	margin: 0;
+}
+section ol li p:first-child {
+	font-family:baksosapi;
+	font-weight: 700;
+	color: #DAA520;
+}
+
+section ol li p:nth-child(2) {
+	font-weight: 500;
+	color: #696969;
+}
+
+section ol li p:nth-child(3) {
+	font-weight: 800;
+	font-family:baksosapi;
 }
 
 .contenedor {
@@ -133,6 +185,19 @@ h2 {
  .alinear-porta > li {
  	width: 40%;
  	justify-content: center;
+ }
+
+ section ul li figure figcaption {
+ 	display: none;
+ }
+
+.transparencia li figure a:hover {
+ 	background color: gray;
+	
+ }
+ section ul li figure a {
+	background color: gray;
+	opacity: 1;
  }
 
 /******************************/
@@ -183,26 +248,67 @@ section ul li figure img {
 	display: flex;
 	width: 85%;
 	flex-flow: row;
-	margin: 1em;
 	flex-wrap: wrap;
 	align-items: flex-start;
 }
 section dl dt {
-	width: 50%;
+	width: calc(50% - 10px);
 	text-align: right;
 	/* border-right: 2px #0388A6 solid; */
-	margin-right: 1em;
-	padding-right: 1em;
+	margin-right: 0;
+	margin-left: 10px;
+	padding-right: 0;
 	padding-bottom: 0em;
 	white-space: pre-wrap;
 }
 
-section dl dt dd {
-	width: 50%;
+section dl > dd {
+	width:calc(50% - 10px);
 	text-align: left;
-	border-left: 2px #0388A6 solid;
-	margin: 0;
+	/*border-left: 2px #0388A6 solid;*/
+	margin-left: 10px;
 }
+.portafolio figure {
+	position: relative;
+}
+	.portafolio figure * {
+		display: block;
+	}
+	.portafolio figcaption {
+		position: absolute;
+		top:0;
+		bottom:0;
+		right:0;
+		left:0;
+		/*display:none;*/
+		opacity:0;
+		transition:all 0.3s ease;
+	}
+	.portafolio figure:hover figcaption {
+		opacity: 0.9;
+	}
+
+	.portafolio figcaption a {
+		position:absolute;
+		top:0px;
+		bottom:0px;
+		right:0px;
+		left:0px;
+		background-color:rgba(0,0,0,0.9);
+		box-shadow:0 0 4px rgba(0,0,0,0.3);
+		color:#fff;
+		text-decoration:none;
+		text-align:center;
+		font-weight:400;
+		text-shadow:0 0 4px rgba(0,0,0,0.6);
+	}
+	.portafolio figcaption span {
+		position:absolute;
+		left:0;
+		right:0;
+		top:50%;
+		transform:translateY(-50%);
+	}
 
 /******************************/
 /***    RESPONSIVE          ***/
@@ -301,10 +407,10 @@ section dl dt dd {
 	nav ul {
 	padding-left: 0;
 	display:block;
-	
 	} 
-	nav ul li {
-		padding: 20px;
+	nav ul a {
+		display: block;
+		text-align: center;
 	}
 	nav {
 		margin-top: 0;
@@ -316,8 +422,18 @@ section dl dt dd {
 	right: 0.5%;
 	bottom: 0.5%;
 	text-decoration: none;
-	background: #0388A6;
+	background: #DAA520;
 	color: white;
+	padding: 6px;
+	}
+
+	.boton-subir:hover {
+	position: fixed;
+	right: 0.5%;
+	bottom: 0.5%;
+	text-decoration: none;
+	background: black;
+	color: #0388A6;
 	padding: 6px;
 	}
 }
@@ -422,11 +538,11 @@ section dl dt dd {
 		display: inline-flex;
 		width: 100%;
 		flex-flow: row;
-		margin: 0px;
+		margin: 0;
 		flex-wrap: wrap; 
-		align-items: center;
-		justify-content: center;
-		text-align: justify;
+		/*align-items: center;*/
+		/*justify-content: center;*/
+		/*text-align: center;*/
 	}
 	.centrar-caja {
 		display: inline;
@@ -440,8 +556,27 @@ section dl dt dd {
 		margin:0 auto;
 		position:relative;
 		list-style-type:none;
+		text-align: justify;
+	}
+	h3 {
 		text-align: center;
 	}
+	section dl dt {
+		/*width: 50%;*/
+		text-align: right;
+		/* border-right: 2px #0388A6 solid; */
+		margin-right: 0;
+		padding-right: 0;
+		padding-bottom: 0;
+	}
+
+	section dl dt dd {
+		/*width: 50%;*/
+		text-align: left;
+		border-left: none;
+		margin-left: 0;
+	}
+
 }
 
  @media screen and (max-width:500px) {
@@ -451,12 +586,12 @@ section dl dt dd {
  	}
 
  	.alinear-dl {
-		display: inline;
-		width: 100%;
+		display: flex;
+		/*width: 100%;*/
 		flex-flow: row;
 		margin: 0px;
 		flex-wrap: wrap; 
-		align-items: flex-start;
+		/*align-items: flex-start;*/
 		justify-content: space-between;
 	}
 	.contenedor {
@@ -470,8 +605,18 @@ section dl dt dd {
 	right: 0.5%;
 	bottom: 0.5%;
 	text-decoration: none;
-	background: #0388A6;
+	background: #DAA520;
 	color: white;
+	padding: 3px;
+	}
+
+	.boton-subir:hover {
+	position: fixed;
+	right: 0.5%;
+	bottom: 0.5%;
+	text-decoration: none;
+	background: black;
+	color: #0388A6;
 	padding: 3px;
 	}
 }
