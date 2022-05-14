@@ -32,10 +32,11 @@ body {
 	text-align: justify;
 }
 header {
-	background-image: url(../media/foto-header.png);
+	background-image: url(../../media/foto-header.png);
 	background-position: left center;
 	background-repeat: no-repeat;
 	background-color: #FFFAF0;
+	background-size: contain;
 }
 header p {
 	font-size: 26px;
@@ -52,7 +53,7 @@ header, footer {
 }
 
 nav {
-	margin-top: -60px;
+	margin-top: 0px;
 }
 nav ul {
 	padding-left: 0;
@@ -83,7 +84,10 @@ hr {
 	border-top: 1px #ACD1F2 ;
 	padding: 12px;
 }
-
+.menuHr{
+	padding: 0;
+	margin: 0;
+}
 .foto-flotante {
 	float: left;
 	width:calc(33.33% - 36px);
@@ -309,6 +313,14 @@ section dl > dd {
 		top:50%;
 		transform:translateY(-50%);
 	}
+#menuPrincipalMovil {
+	text-align: right;
+	padding: 0.5em;
+	display: none;
+}
+	#menuPrincipalIcono { /* Para que el menú hamburguesa de la indicación que es interativo, con el cursor nos indique que hay interacción */
+		cursor: pointer;
+	}
 
 /******************************/
 /***    RESPONSIVE          ***/
@@ -392,28 +404,33 @@ section dl > dd {
 	    margin-left: 3em;
 	}
 	
-	nav ul {
-	padding-left: 0;
-	display:flex;
-	flex-direction:row;
-	flex-wrap: initial;
-	align-items: center;
-	justify-content: space-around;
-	list-style-type: none;
-	} 
 }
 
 @media screen and (max-width:1020px) {
 	nav ul {
 	padding-left: 0;
-	display:block;
+	display:flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+	list-style-type: none;
 	} 
+
 	nav ul a {
-		display: block;
-		text-align: center;
+	background: #f5d121;
+	color: black;
+	padding: 1em 0.35em;
+	margin: 1px;
+	text-decoration: none;
+	font-family:baksosapi;
 	}
-	nav {
-		margin-top: 0;
+
+	nav ul a:hover {
+		background: black;
+		color: white;
+		padding: 1em 0.35em;
+		margin: 1px;
 	}
 }
 @media screen and (max-width:995px) {
@@ -526,6 +543,34 @@ section dl > dd {
 	 	width: 50%;
 	 	justify-content: center;
  	}
+}
+
+@media screen and (max-width:810px) {
+	#menuPrincipalMovil {
+	display:block;
+	}
+
+	nav ul {   
+	padding-left: 0;
+	display:block;
+	overflow: hidden;
+	transition: all 0.6s ease;
+	max-height: 0;
+	} 
+	nav ul li {
+		margin: 0.5em;
+	}
+	nav ul a {
+		display: block;
+		text-align: center;
+		transition: all 0.45s ease;
+	}
+	nav {
+		margin-top: 0;
+	}
+	nav ul.abierto {
+		max-height: 900px;
+	}
 }
 
  @media screen and (max-width:716px) {

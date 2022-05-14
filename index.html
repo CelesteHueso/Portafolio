@@ -25,12 +25,17 @@
 		<meta name="twitter:creator" content="@celestehueso">
 		
 		<!-- Información de estilos -->
-		<link rel="stylesheet" href="css/estilos.css" /> 
+		<link rel="stylesheet" href="assets/css/estilos.css"/> 
 
 		<!-- Estilos de íconos fontawesome -->
-		<link rel="stylesheet" href="css/all.min.css" />
+		<link rel="stylesheet" href="assets/fontawesome/all.min.css" />
 
+		<!-- FAVICON -->
 		<link rel="icon" type="image/x-icon" href="media/favicon.ico">
+
+		<!-- SCRIPTS -->
+		<script src="assets/js/jquery-3.6.0.min.js"></script>
+		<script src="assets/js/funciones.js"></script>
 
 		
 	</head>
@@ -40,11 +45,15 @@
 		<header>
 			<h1>Celeste Hueso</h1> <!-- Tìtulo del docuemnto que indexará google para mejorar el posicionamiento -->
 			<p>Diseñadora gráfica</p>
-		</header>
-		<hr/>
 
-		<nav><!--Espacio para incluir menú -->
-			<ul>
+		</header>
+		<hr class="menuHr" />
+
+		<nav id="tucola"><!--Espacio para incluir menú -->
+			<div id="menuPrincipalMovil">
+				<i class="fa-solid fa-bars fa-2x" id="menuPrincipalIcono"></i>
+			</div>
+			<ul class="">
 				<li>
 					<a href="#pre">Presentación</a>
 				</li>
@@ -54,11 +63,11 @@
 				</li>
 
 				<li>
-					<a href="#exp">Experiencia laboral</a>
+					<a href="#exp">Experiencia</a>
 				</li>
 
 				<li>
-					<a href="#for">Formación académica</a>
+					<a href="#for">Formación</a>
 				</li>
 
 				<li>
